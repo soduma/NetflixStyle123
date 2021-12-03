@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HomeViewController: UICollectionViewController {
     
@@ -19,9 +20,10 @@ class HomeViewController: UICollectionViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage() // 투명하지만 약간 그림자
         navigationController?.hidesBarsOnSwipe = true
+        view.backgroundColor = .black
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "netflix_icon"), style: .plain, target: nil, action: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle.crop"), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style: .plain, target: nil, action: nil)
         
         //데이터 설정
         contents = getContents()
@@ -85,5 +87,25 @@ extension HomeViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sectionName = contents[indexPath.section].sectionName
         print("test!!!! \(sectionName) 섹션의 \(indexPath.row + 1) 콘텐츠 (+1된 값)")
+    }
+}
+
+//swiftui preview
+struct HomeViewControllerPreview: PreviewProvider {
+    static var previews: some View {
+        Container().preferredColorScheme(.dark).edgesIgnoringSafeArea(.all)
+    }
+
+    struct Container: UIViewControllerRepresentable {
+        func makeUIViewController(context: Context) -> UIViewController {
+            let layout = UICollectionViewLayout()
+            let homeViewController = HomeViewController(collectionViewLayout: layout)
+            return UINavigationController(rootViewController: homeViewController)
+        }
+
+        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+
+        }
+        typealias UIViewControllerType = UIViewController
     }
 }
