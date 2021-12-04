@@ -17,6 +17,7 @@
 		A074A58C2759E1370029037F /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074A58B2759E1370029037F /* Content.swift */; };
 		A074A58E2759E7C70029037F /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074A58D2759E7C70029037F /* ContentCollectionViewCell.swift */; };
 		A074A5902759EAEB0029037F /* ContentCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074A58F2759EAEB0029037F /* ContentCollectionViewHeader.swift */; };
+		A0A09267275B5DB3008C499D /* RankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A09266275B5DB3008C499D /* RankCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		A074A58B2759E1370029037F /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		A074A58D2759E7C70029037F /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		A074A58F2759EAEB0029037F /* ContentCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewHeader.swift; sourceTree = "<group>"; };
+		A0A09266275B5DB3008C499D /* RankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				A074A5842759D9DE0029037F /* HomeViewController.swift */,
 				A074A58D2759E7C70029037F /* ContentCollectionViewCell.swift */,
 				A074A58F2759EAEB0029037F /* ContentCollectionViewHeader.swift */,
+				A0A09266275B5DB3008C499D /* RankCollectionViewCell.swift */,
 				A074A58B2759E1370029037F /* Content.swift */,
 				A074A5792759D5070029037F /* Assets.xcassets */,
 				A074A57B2759D5070029037F /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 			files = (
 				A074A5712759D5060029037F /* AppDelegate.swift in Sources */,
 				A074A5902759EAEB0029037F /* ContentCollectionViewHeader.swift in Sources */,
+				A0A09267275B5DB3008C499D /* RankCollectionViewCell.swift in Sources */,
 				A074A5732759D5060029037F /* SceneDelegate.swift in Sources */,
 				A074A5852759D9DE0029037F /* HomeViewController.swift in Sources */,
 				A074A58C2759E1370029037F /* Content.swift in Sources */,

@@ -18,7 +18,7 @@ class ContentCollectionViewCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 5
         contentView.clipsToBounds = true
         
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         contentView.addSubview(imageView)
         
         imageView.snp.makeConstraints {
