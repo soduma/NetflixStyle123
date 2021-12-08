@@ -192,27 +192,32 @@ extension HomeViewController {
 
     // MARK: UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let sectionName = contents[indexPath.section].sectionName
-        print("test!!!! \(sectionName) 섹션의 \(indexPath.row + 1) 콘텐츠 (+1된 값)")
+//        let sectionName = contents[indexPath.section].sectionName
+//        print("test!!!! \(sectionName) 섹션의 \(indexPath.row + 1) 콘텐츠 (+1된 값)")
+        let isFirstSection = indexPath.section == 0
+        let selectedItem = isFirstSection ? mainItem : contents[indexPath.section].contentItem[indexPath.row]
+        let contentDetailView = ContentDetailView(item: selectedItem)
+        let hostingVC = UIHostingController(rootView: contentDetailView)
+        show(hostingVC, sender: nil)
     }
 }
 
 //swiftui preview
 struct HomeViewControllerPreview: PreviewProvider {
     static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
+        HomeViewControllerRepresentable().edgesIgnoringSafeArea(.all)
     }
 
-    struct Container: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> UIViewController {
-            let layout = UICollectionViewLayout()
-            let homeViewController = HomeViewController(collectionViewLayout: layout)
-            return UINavigationController(rootViewController: homeViewController)
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        }
-        
-        typealias UIViewControllerType = UIViewController
+}
+struct HomeViewControllerRepresentable: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIViewController {
+        let layout = UICollectionViewLayout()
+        let homeViewController = HomeViewController(collectionViewLayout: layout)
+        return UINavigationController(rootViewController: homeViewController)
     }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+    }
+    
+    typealias UIViewControllerType = UIViewController
 }
